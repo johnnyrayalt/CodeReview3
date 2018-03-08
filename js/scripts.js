@@ -24,9 +24,7 @@ $(document).ready(function() {
 
     var result = pingPong(userInput);
 
-
-    
-      $("#listCount").append("<li>" + storeArray.splice(0, 1) + "</li>");
-
+// fix this forEach Loop
+    $("#listCount").append("<li>" + storeArray.splice(0, 1) + "</li>");
   });
 });
