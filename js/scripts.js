@@ -12,7 +12,7 @@ function pingPong(userInput) {
       storeArray.push(i);
     };
   };
-
+  return storeArray;
 };
 
 
@@ -21,10 +21,10 @@ $(document).ready(function() {
     event.preventDefault();
 
     var userInput = parseInt($("input#userInput").val());
-
     var result = pingPong(userInput);
 
-// fix this forEach Loop
-    $("#listCount").append("<li>" + storeArray.splice(0, 1) + "</li>");
+    for (var i=0; i < result.length; i++) {
+      $("#output ul").append("<li>" + result[i] + "</li>");
+    };
   });
 });
